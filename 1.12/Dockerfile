@@ -32,7 +32,7 @@ RUN set -ex && \
         pcre-dev \
         zlib-dev && \
 
-    wget -qO- https://github.com/wodby/gotpl/releases/download/${GOTPL_VER}/gotpl-alpine-linux-amd64-${GOTPL_VER}.tar.gz | tar xz -C /usr/local/bin && \
+    wget -qO- https://github.com/seedcloud/gotpl/releases/download/${GOTPL_VER}/gotpl-alpine-linux-amd64-${GOTPL_VER}.tar.gz | tar xz -C /usr/local/bin && \
 
     wget -qO- http://nginx.org/download/nginx-${NGINX_VER}.tar.gz | tar xz -C /tmp/ && \
     wget -qO- https://github.com/masterzen/nginx-upload-progress-module/archive/v${NGINX_UP_VER}.tar.gz | tar xz -C /tmp/ && \

@@ -1,14 +1,11 @@
 # Nginx docker container image
 
-[![Build Status](https://travis-ci.org/wodby/nginx.svg?branch=master)](https://travis-ci.org/wodby/nginx)
-[![Docker Pulls](https://img.shields.io/docker/pulls/wodby/nginx.svg)](https://hub.docker.com/r/wodby/nginx)
-[![Docker Stars](https://img.shields.io/docker/stars/wodby/nginx.svg)](https://hub.docker.com/r/wodby/nginx)
-[![Wodby Slack](http://slack.wodby.com/badge.svg)](http://slack.wodby.com)
+This repository was forked initially from https://github.com/wodby/nginx
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.13-2.2.0`, `1.13`, `latest` (*1.13/Dockerfile*)](https://github.com/wodby/nginx/tree/master/1.13/Dockerfile)
-- [`1.12-2.2.0`, `1.12`, `stable` (*1.12/Dockerfile*)](https://github.com/wodby/nginx/tree/master/1.12/Dockerfile)
+- [`1.13-2.2.0`, `1.13`, `latest` (*1.13/Dockerfile*)](https://github.com/seedcloud/nginx/tree/master/1.13/Dockerfile)
+- [`1.12-2.2.0`, `1.12`, `stable` (*1.12/Dockerfile*)](https://github.com/seedcloud/nginx/tree/master/1.12/Dockerfile)
 
 ## Environment variables available for customization
 
@@ -21,7 +18,7 @@
 | NGINX_CLIENT_HEADER_TIMEOUT    | 600                   | |
 | NGINX_CLIENT_MAX_BODY_SIZE     | 256                   | |
 | NGINX_CONF_INCLUDE             | conf.d/*.conf         | |
-| NGINX_ERROR_LOG                | /proc/self/fd/2       | |    
+| NGINX_ERROR_LOG                | /proc/self/fd/2       | |
 | NGINX_ERROR_LOG_LEVEL          | error                 | |
 | NGINX_FASTCGI_BUFFERS          | 16 32k                | |
 | NGINX_FASTCGI_BUFFER_SIZE      | 32k                   | |
@@ -57,7 +54,7 @@ make COMMAND [params ...]
 
 commands:
     check-ready [host max_try wait_seconds delay_seconds]
- 
+
 default params values:
     host localhost
     max_try 1
@@ -71,7 +68,3 @@ Examples:
 # Wait for Nginx to start
 docker exec -ti [ID] make check-ready max_try=10 -f /usr/local/bin/actions.mk
 ```
-
-## Deployment
-
-Deploy Nginx to your own server via [![Wodby](https://www.google.com/s2/favicons?domain=wodby.com) Wodby](https://wodby.com).

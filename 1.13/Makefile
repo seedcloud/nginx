@@ -2,7 +2,7 @@
 
 VERSION ?= 1.13
 
-REPO = wodby/nginx
+REPO = seedcloud/nginx
 NAME = nginx-1.13
 
 .PHONY: build test push shell run start stop logs clean release
